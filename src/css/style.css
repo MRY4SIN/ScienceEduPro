@@ -1,0 +1,195 @@
+:root {
+    --primary-color: #01e794;
+    --secondary-color: #43baff;
+    --tertiary-color: #f58236;
+    --natural-color: brown;
+    --light-color: yellow;
+    --dark-color: #353535;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+header {
+    padding: 10px 0px;
+    display: flex;
+}
+
+#logo {
+    margin-left: 20px;
+    height: 100%;
+    width: auto;
+    fill: 73f2c1;
+}
+
+.bg-dark {
+    background-color: var(--dark-color);
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    flex-direction: column-reverse;
+    float: right;
+    background-color: inherit;
+}
+
+nav li a,
+nav li {
+    text-decoration: none;
+    font-size: 24px;
+    list-style-type: none;
+    margin-right: 10px;
+    color: inherit;
+    display: inline-flex;
+}
+
+nav a:hover,
+nav li:hover {
+    color: var(--tertiary-color);
+    transition: 0.3s
+}
+
+nav a:active {
+    background-color: var(--primary-color);
+}
+
+nav a:visited {
+    text-decoration: inherit;
+}
+
+section {
+    padding: 20px 0;
+}
+
+section h1 {
+    color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: var(--secondary-color);
+    padding: 10px 0;
+    text-align: center;
+    top: auto;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    margin-top: 50px;
+}
+
+.hero {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/img/hero.jpg");
+    /* Set a specific height */
+    height: 50vh;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: grid;
+    position: inherit;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: auto;
+    padding: 1.5rem;
+
+}
+
+.hero-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.hero-button a {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 50px;
+    color: black;
+}
+
+.hero-button a:hover {
+    background-color: var(--tertiary-color);
+    transition: 0.3s;
+    opacity: 1;
+    color: var(--natural-color);
+}
+
+.features {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0%;
+}
+
+.card {
+    margin: 10px;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 5px 5px 5px #555, 10px 10px 10px rgb(24, 43, 24);
+    transition: 0.3s;
+    width: 300px;
+    
+
+}
+
+.card-header {
+    background-color: var(--dark-color);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 10px;
+    min-height: 10px;
+}
+
+.card-body {
+    background-color: inherit;
+    min-width: 200px;
+    padding: 10px;
+    text-decoration: none;
+    height: 100%;
+
+}
+
+.card-footer {
+    width: 100%;
+    background-color: var(--dark-color);
+    padding: 5px 10px;
+    bottom: 0%;
+    margin-top: auto;
+
+
+}
