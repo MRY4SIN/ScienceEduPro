@@ -9,8 +9,6 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 html {
@@ -18,8 +16,13 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
 header {
-    padding: 10px 0px;
+    padding: 10px 0;
     display: flex;
 }
 
@@ -27,11 +30,10 @@ header {
     margin-left: 20px;
     height: 100%;
     width: auto;
-    fill: 73f2c1;
 }
 
 .bg-dark {
-    background-color: var(--dark-color);
+    background-color: #353535;
 }
 
 .text-primary {
@@ -43,7 +45,6 @@ nav {
     display: flex;
     align-items: flex-end;
     justify-content: end;
-
 }
 
 nav ul {
@@ -68,11 +69,11 @@ nav li {
 nav a:hover,
 nav li:hover {
     color: var(--tertiary-color);
-    transition: 0.3s
+    transition: 0.3s;
 }
 
 nav a:active {
-    background-color: var(--primary-color);
+    background-color: #01e794;
 }
 
 nav a:visited {
@@ -88,7 +89,7 @@ section h1 {
 }
 
 footer {
-    background-color: var(--dark-color);
+    background-color: #353535;
     color: var(--secondary-color);
     padding: 10px 0;
     text-align: center;
@@ -100,11 +101,8 @@ footer {
 }
 
 .hero {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/img/hero.jpg");
-    /* Set a specific height */
+    background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url("/src/img/hero.jpg");
     height: 50vh;
-    /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -113,13 +111,11 @@ footer {
     position: inherit;
 }
 
-/* Place text in the middle of the image */
 .hero-text {
     text-align: center;
     margin-top: 10vh;
     margin-bottom: auto;
     padding: 1.5rem;
-
 }
 
 .hero-button {
@@ -130,7 +126,7 @@ footer {
 
 .hero-button a {
     text-decoration: none;
-    background-color: var(--primary-color);
+    background-color: #01e794;
     padding: 14px 20px;
     border: none;
     cursor: pointer;
@@ -142,7 +138,7 @@ footer {
 }
 
 .hero-button a:hover {
-    background-color: var(--tertiary-color);
+    background-color: #f58236;
     transition: 0.3s;
     opacity: 1;
     color: var(--natural-color);
@@ -151,24 +147,21 @@ footer {
 .features {
     justify-content: space-around;
     display: flex;
-    flex-direction: row;
-    flex-shrink: 0%;
+    flex-wrap: wrap;
+
 }
 
 .card {
     margin: 10px;
-    display:flex;
-    flex-direction: column;
     position: relative;
     box-shadow: 5px 5px 5px #555, 10px 10px 10px rgb(24, 43, 24);
     transition: 0.3s;
     width: 300px;
-    
-
+    display: inline-block;
 }
 
 .card-header {
-    background-color: var(--dark-color);
+    background-color: #353535;
     color: var(--primary-color);
     text-align: center;
     padding: 10px;
@@ -181,15 +174,144 @@ footer {
     padding: 10px;
     text-decoration: none;
     height: 100%;
-
 }
 
 .card-footer {
+    position: absolute;
+    color: var(--secondary-color);
     width: 100%;
-    background-color: var(--dark-color);
+    background-color: #353535;
     padding: 5px 10px;
     bottom: 0%;
     margin-top: auto;
+}
 
+h1,
+h2 {
+    color: #333;
+}
 
+.container {
+    padding: 1.5rem;
+    display: inherit;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    max-width: 200px;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: auto;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidebar a {
+    width: 100%;
+    display: block;
+    color: #510404;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#sidebar-content {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+button.accordion.active,
+button.accordion:hover {
+    background-color: #ddd;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px;
+    transition: 0.4s ease-in-out;
+    /* adjust this as per your needs */
+}
+
+.collapse {
+    max-width: 0px !important;
+    transition: 350ms;
+    opacity: 0;
+    overflow: hidden;
+
+}
+
+.discussion-item {
+    margin-bottom: 20px;
+}
+
+.question {
+    font-weight: bold;
+    color: var(--natural-color);
+}
+
+.response {
+    color: var(--tertiary-color);
+    margin-left: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.policy-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+}
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+.contact-form input[type="submit"] {
+    background-color:var(--primary-color);
+    color: var(--dark-color);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+.contact-form input[type="submit"]:hover {
+    background-color:var(--primary-color);
 }
